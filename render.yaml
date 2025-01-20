@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: resume-analyzer-api
+    env: python
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: cd backend && gunicorn wsgi:application
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.9.0
+      - key: TOGETHER_API_KEY
+        sync: false

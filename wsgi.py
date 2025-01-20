@@ -1,10 +1,10 @@
 import os
-from dotenv import load_dotenv
-from app import app
+import sys
 
-# Load environment variables
-load_dotenv()
+# Add the parent directory to Python path
+sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
-if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 8080))  # Railway uses port 8080 by default
-    app.run(host="0.0.0.0", port=port) 
+from backend.app import app
+
+# This is the application variable that Gunicorn expects
+application = app 
