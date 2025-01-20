@@ -1,9 +1,9 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import json
-from .analyzer import ResumeAnalyzer
-from .utils import extract_text_from_pdf, extract_text_from_docx
-from .models import JobDescription
+from analyzer import ResumeAnalyzer
+from utils import extract_text_from_pdf, extract_text_from_docx
+from models import JobDescription
 import os
 from dotenv import load_dotenv
 import together
