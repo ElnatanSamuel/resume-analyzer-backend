@@ -16,7 +16,8 @@ CORS(app, resources={
     r"/*": {
         "origins": [
             "http://localhost:3000",
-            "https://your-frontend-domain.com"
+            "https://your-frontend-domain.com",
+            "https://web-production-cf1c.up.railway.app" 
         ]
     }
 })
