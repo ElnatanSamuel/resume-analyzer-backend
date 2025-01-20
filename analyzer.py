@@ -1,12 +1,12 @@
 from transformers import pipeline
 from typing import List, Dict
 import torch
-from .models import JobDescription, ResumeAnalysis
+from models import JobDescription, ResumeAnalysis
 import logging
 import re
 import os
 import together
-from backend.utils import extract_sections, get_embeddings
+from utils import extract_sections, get_embeddings
 import numpy as np
 
 logger = logging.getLogger(__name__)
