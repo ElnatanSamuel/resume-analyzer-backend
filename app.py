@@ -22,7 +22,7 @@ CORS(app, resources={
 })
 
 # Configure Together AI
-together.api_key = os.getenv('TOGETHER_API_KEY')
+together.api_key = 'ee472495ec6514e25553987a73ed1f43fdfdd77938b4fed33aba5ebc5d7c45bc'
 
 if not together.api_key:
     raise ValueError("TOGETHER_API_KEY not found in environment variables")
